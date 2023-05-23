@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 39px 75px;
+  gap: 333px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+  position: sticky;
+  height: 110px;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  transition: transform 550ms ease-in-out;
+}
+
+.logo {
+}
+.itemContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+  width: 445px;
+  height: 19px;
+}
+.navitem {
+  text-decoration: none;
+
+  color: white;
+  font-size: 16px;
+}
+.hidden {
+  transform: translateY(-100%);
+}
