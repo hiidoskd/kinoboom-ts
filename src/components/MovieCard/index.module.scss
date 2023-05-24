@@ -1,13 +1,38 @@
 .container {
   position: relative;
   display: inline-block;
+  width: 240px;
+  transition: transform 500ms ease-in-out 500ms;
+  :hover {
+  }
+  h2 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .description {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .star {
+    color: #ffcd1a;
+  }
+  .rating {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+  }
 }
 
 .containerImg {
   img {
+    max-width: 100%;
+
     border-radius: 10px;
-    max-width: 280px;
-    max-height: 412px;
+    aspect-ratio: 2 / 3;
     object-fit: cover;
   }
 }
@@ -15,4 +40,7 @@
 .info {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
 }
