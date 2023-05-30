@@ -1,5 +1,8 @@
+@use './vars' as *;
+
 body {
   font-family: 'Rubik', sans-serif;
-
+  background: $bg1;
+  margin: 0;
   color: white;
 }
