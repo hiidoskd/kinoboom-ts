@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+  align-items: baseline;
+  padding: 8px 0;
+  font-size: 13px;
+}
+.rowItem {
+  flex-grow: 1;
+  max-width: 160px;
+}
