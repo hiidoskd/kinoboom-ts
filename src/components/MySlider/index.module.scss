@@ -8,3 +8,8 @@
   .mySwiper {
   }
 }
+.disabledSwiperButton {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}

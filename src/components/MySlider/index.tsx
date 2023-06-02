@@ -1,4 +1,3 @@
-import React from 'react';
 import useSWR from 'swr';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
@@ -15,8 +14,12 @@ interface MySliderProps {
 }
 
 const MySlider = ({ filters, title }: MySliderProps) => {
-  const { data, isLoading } = useSWR([filters, 1, ''], getMoviesByFilters);
-  if (isLoading) return null;
+  const { data, isLoading } = useSWR([filters, 1, ''], getMoviesByFilters, {
+    revalidateIfStale: false,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+  });
+  if (isLoading || data == undefined) return null;
 
   return (
     <div className={styles.container}>
@@ -24,7 +27,11 @@ const MySlider = ({ filters, title }: MySliderProps) => {
       <div className={styles.mySwiper}>
         <Swiper
           modules={[Navigation]}
-          navigation
+          navigation={{
+            // nextEl: '.swiper-button-next',
+            // prevEl: '.swiper-button-prev',
+            disabledClass: styles.disabledSwiperButton,
+          }}
           direction="horizontal"
           grabCursor={true}
           slidesPerView={5}
@@ -61,7 +68,8 @@ const MySlider = ({ filters, title }: MySliderProps) => {
                   item.ratingKinopoisk ? item.ratingKinopoisk : item.ratingImdb
                 }
                 type={item.type}
-                url={item.posterUrlPreview}
+                // url={item.posterUrlPreview}
+                url="#"
                 genres={item.genres}
               />
             </SwiperSlide>
