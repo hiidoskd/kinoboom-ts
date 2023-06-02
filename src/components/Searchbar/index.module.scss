@@ -1,0 +1,51 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @media (max-width: 768px) {
+    flex-grow: 1;
+  }
+
+  .searchbar {
+    position: relative;
+    padding: 0px 1em;
+    flex-grow: 1;
+    background: rgb(40, 40, 40);
+    border-radius: 5px;
+    input {
+      width: 100%;
+      background: inherit;
+      height: 36px;
+      font-size: 1rem;
+      border: none;
+      outline: 0;
+      color: white;
+    }
+  }
+
+  button {
+    display: flex;
+    border: none;
+    padding: 0;
+    background: transparent;
+    color: gray;
+    cursor: pointer;
+  }
+
+  .btnSearch {
+    margin-left: 10px;
+  }
+
+  .btnClose {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: hidden;
+  }
+  .btnCloseActive {
+    visibility: visible;
+  }
+}
