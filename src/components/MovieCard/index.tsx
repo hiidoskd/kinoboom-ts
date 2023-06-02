@@ -9,7 +9,7 @@ interface MovieCardProps {
   rating: number;
   type: 'movie' | 'series';
   url: string;
-  genres: { name: string }[];
+  genres: { genre: string }[];
 }
 
 const MovieCard = ({
@@ -20,8 +20,9 @@ const MovieCard = ({
   url,
   genres,
 }: MovieCardProps) => {
+  if (!rating) rating = 0;
   return (
-    <Link to="/">
+    <Link to={`movies/${id}`}>
       <div className={styles.container}>
         <div className={styles.containerImg}>
           <img src={url} />
@@ -30,9 +31,9 @@ const MovieCard = ({
           <h2>{title}</h2>
           <div className={styles.description}>
             <StarFilledIcon className={styles.star} />
-            <span className={styles.rating}>{rating.toFixed(1)} </span>
+            <span className={styles.rating}>{rating?.toFixed(1)} </span>
             <Subtitle>
-              | {type == 'movie' ? 'Фильм' : 'Сериал'} • {genres[0].name}
+              | {type == 'movie' ? 'Фильм' : 'Сериал'} • {genres[0].genre}
             </Subtitle>
           </div>
         </div>
