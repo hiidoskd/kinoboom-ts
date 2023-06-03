@@ -1,0 +1,38 @@
+diff --git a/node_modules/swiper/package.json b/node_modules/swiper/package.json
+index 332bf5a..86ef815 100644
+--- a/node_modules/swiper/package.json
++++ b/node_modules/swiper/package.json
+@@ -7,8 +7,14 @@
+   "main": "./swiper.esm.js",
+   "module": "./swiper.esm.js",
+   "exports": {
+-    ".": "./swiper.esm.js",
+-    "./core": "./swiper.esm.js",
++    ".": {
++      "types": "./swiper.d.ts",
++      "default": "./swiper.esm.js"
++    },
++    "./core": {
++      "types": "./swiper.d.ts",
++      "default": "./swiper.esm.js"
++    },
+     "./swiper.esm.js": "./swiper.esm.js",
+     "./bundle": "./swiper-bundle.esm.js",
+     "./swiper-bundle.esm.js": "./swiper-bundle.esm.js",
+@@ -120,8 +126,14 @@
+     "./element/css/thumbs": "./modules/thumbs/thumbs-element.min.css",
+     "./element/css/virtual": "./modules/virtual/virtual-element.min.css",
+     "./element/css/zoom": "./modules/zoom/zoom-element.min.css",
+-    "./react": "./react/swiper-react.js",
+-    "./vue": "./vue/swiper-vue.js",
++    "./react": {
++      "types": "./react/swiper-react.d.ts",
++      "default": "./react/swiper-react.js"
++    },
++    "./vue": {
++      "types": "./vue/swiper-vue.d.ts",
++      "default": "./vue/swiper-vue.js"
++    },
+     "./types": "./types/index.d.ts",
+     "./package.json": "./package.json"
+   },
