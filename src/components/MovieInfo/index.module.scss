@@ -1,10 +1,16 @@
-.row {
-  display: flex;
-  align-items: baseline;
-  padding: 8px 0;
-  font-size: 13px;
-}
-.rowItem {
-  flex-grow: 1;
-  max-width: 160px;
+.info {
+  font-size: 0.9rem;
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0.5rem 0px;
+  }
+
+  table {
+    width: 100%;
+    td {
+      padding: 0.8em 0em;
+    }
+  }
 }
