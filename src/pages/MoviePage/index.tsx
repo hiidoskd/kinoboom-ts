@@ -46,7 +46,6 @@ const MoviePage = () => {
             </div>
           </div>
         </div>
-        <div className={styles.tabs}></div>
       </div>
     </div>
   );
