@@ -2,8 +2,8 @@ import useSWR from 'swr';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import styles from './index.module.scss';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
 
 import { IFilters, getMoviesByFilters } from '../../api/kinoboomApi';
 import MovieCard from '../MovieCard';
@@ -38,23 +38,32 @@ const MySlider = ({ filters, title }: MySliderProps) => {
           spaceBetween={10}
           breakpoints={{
             0: {
-              slidesPerView: 1,
+              slidesPerView: 1.05,
               spaceBetween: 10,
+              navigation: {
+                enabled: false,
+              },
             },
             480: {
-              slidesPerView: 2,
+              slidesPerView: 2.1,
               spaceBetween: 10,
+              navigation: {
+                enabled: false,
+              },
             },
             768: {
-              slidesPerView: 3,
+              slidesPerView: 3.2,
               spaceBetween: 15,
+              navigation: {
+                enabled: false,
+              },
             },
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 4.3,
               spaceBetween: 20,
             },
             1280: {
-              slidesPerView: 5,
+              slidesPerView: 5.4,
               spaceBetween: 30,
             },
           }}
@@ -68,8 +77,8 @@ const MySlider = ({ filters, title }: MySliderProps) => {
                   item.ratingKinopoisk ? item.ratingKinopoisk : item.ratingImdb
                 }
                 type={item.type}
-                // url={item.posterUrlPreview}
-                url="#"
+                url={item.posterUrlPreview}
+                // url="#"
                 genres={item.genres}
               />
             </SwiperSlide>
