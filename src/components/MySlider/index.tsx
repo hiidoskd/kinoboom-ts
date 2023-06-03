@@ -68,8 +68,8 @@ const MySlider = ({ filters, title }: MySliderProps) => {
             },
           }}
         >
-          {data.items.map((item) => (
-            <SwiperSlide>
+          {data.items.map((item: any) => (
+            <SwiperSlide key={item.kinopoiskId}>
               <MovieCard
                 id={item.kinopoiskId}
                 title={item.nameRu ? item.nameRu : item.nameOriginal}

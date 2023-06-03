@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './index.module.scss';
 import { MagnifyingGlassIcon, Cross2Icon } from '@radix-ui/react-icons';
@@ -8,7 +8,7 @@ const Searchbar = () => {
 
   const [value, setValue] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     navgigate(`/search/${value}`);
   };

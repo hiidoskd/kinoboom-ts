@@ -1,5 +1,4 @@
-import useSWR from 'swr';
-import { getMovieById, IFilters } from '../../api/kinoboomApi';
+import { IFilters } from '../../api/kinoboomApi';
 import MySlider from '../../components/MySlider';
 
 const filters: IFilters = {

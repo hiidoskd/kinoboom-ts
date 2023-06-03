@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import styles from './index.module.scss';
 
-const MovieInfo = ({ movie }) => {
+const MovieInfo = ({ movie }: any) => {
   return (
     <div className={styles.info}>
       <h3>О фильме</h3>
@@ -13,18 +13,20 @@ const MovieInfo = ({ movie }) => {
         <tr className={styles.row}>
           <td className={styles.rowItem}>Страна</td>
           <td className={styles.rowItem}>
-            {movie.countries.map((country, idx) => (
-              <Fragment key={country.country}>
-                {idx ? ', ' : ''}
-                {country.country}
-              </Fragment>
-            ))}
+            {movie.countries.map(
+              (country: { country: string }, idx: number) => (
+                <Fragment key={country.country}>
+                  {idx ? ', ' : ''}
+                  {country.country}
+                </Fragment>
+              )
+            )}
           </td>
         </tr>
         <tr className={styles.row}>
           <td className={styles.rowItem}>Жанр</td>
           <td className={styles.rowItem}>
-            {movie.genres.map((genre, idx) => (
+            {movie.genres.map((genre: { genre: string }, idx: number) => (
               <Fragment key={genre.genre}>
                 {idx ? ', ' : ''}
                 {genre.genre}

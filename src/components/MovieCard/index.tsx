@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './index.module.scss';
 import { Link } from 'react-router-dom';
 import Subtitle from '../ui/Subtitle';

@@ -1,4 +1,4 @@
-import React, { ComponentProps } from 'react';
+import { ComponentProps } from 'react';
 import styles from './index.module.scss';
 interface ButtonProps extends ComponentProps<'button'> {
   variant: 'primary' | 'secondary';
