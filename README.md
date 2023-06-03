@@ -5,3 +5,7 @@
 -   TypeScript
 -   SWR
 -   Sass, CSS modules
+
+# Для запуска
+- npm install
+- npm run dev
