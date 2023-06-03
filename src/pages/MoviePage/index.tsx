@@ -23,7 +23,7 @@ const MoviePage = () => {
         <div className={styles.mainContent}>
           <div className={styles.leftColumn}>
             <div className={styles.poster}>
-              <img src={data.posterUrl} alt="poster" width="300" />
+              <img src={data.posterUrl} alt="poster" />
             </div>
           </div>
           <div className={styles.rightColumn}>
@@ -33,7 +33,7 @@ const MoviePage = () => {
                   {data.nameRu} ({data.year})
                 </h1>
                 <h2>{data.nameOriginal}</h2>
-                <p>{data.description}</p>
+                <p>{data.shortDescription}</p>
                 <div className={styles.buttonGroup}>
                   <button onClick={() => navigate(`/room/${id}`)}>
                     Смотреть
@@ -43,7 +43,6 @@ const MoviePage = () => {
                 </div>
                 <MovieInfo movie={data} />
               </div>
-              <div className={styles.infoRight}></div>
             </div>
           </div>
         </div>
