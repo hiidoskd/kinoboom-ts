@@ -13,6 +13,7 @@
     padding: 0px 1em;
     flex-grow: 1;
     background: rgb(40, 40, 40);
+    width: clamp(150px, 28vw, 400px);
     border-radius: 5px;
     input {
       width: 100%;
