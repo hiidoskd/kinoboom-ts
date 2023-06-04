@@ -1,6 +1,6 @@
-import styles from './index.module.scss';
+import styles from './MovieCard.module.scss';
 import { Link } from 'react-router-dom';
-import Subtitle from '../ui/Subtitle';
+import Subtitle from '../ui/Subtitle/Subtitle';
 import { StarFilledIcon } from '@radix-ui/react-icons';
 interface MovieCardProps {
   id: number;

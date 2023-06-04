@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './index.module.scss';
+import styles from './Searchbar.module.scss';
 import { MagnifyingGlassIcon, Cross2Icon } from '@radix-ui/react-icons';
 
 const Searchbar = () => {

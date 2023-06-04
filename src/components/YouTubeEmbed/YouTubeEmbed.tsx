@@ -1,4 +1,4 @@
-import styles from './index.module.scss';
+import styles from './YouTubeEmbed.module.scss';
 const YouTubeEmbed = ({ embedUrl }: { embedUrl: string }) => {
   console.log(embedUrl);
   return (

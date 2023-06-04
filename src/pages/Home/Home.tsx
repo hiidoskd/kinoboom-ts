@@ -1,5 +1,5 @@
 import { IFilters } from '../../api/kinoboomApi';
-import MySlider from '../../components/MySlider';
+import MySlider from '../../components/MySlider/MySlider';
 
 const filters: IFilters = {
   ratingFrom: 0,

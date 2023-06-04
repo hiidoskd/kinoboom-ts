@@ -1,12 +1,12 @@
 import useSWR from 'swr';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
-import styles from './index.module.scss';
+import styles from './MySlider.module.scss';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 
 import { IFilters, getMoviesByFilters } from '../../api/kinoboomApi';
-import MovieCard from '../MovieCard';
+import MovieCard from '../MovieCard/MovieCard';
 
 interface MySliderProps {
   title: string;
@@ -77,8 +77,8 @@ const MySlider = ({ filters, title }: MySliderProps) => {
                   item.ratingKinopoisk ? item.ratingKinopoisk : item.ratingImdb
                 }
                 type={item.type}
-                url={item.posterUrlPreview}
-                // url="#"
+                // url={item.posterUrlPreview}
+                url="#"
                 genres={item.genres}
               />
             </SwiperSlide>

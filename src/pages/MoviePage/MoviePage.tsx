@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom';
 import useSWR from 'swr';
 import { getMovieById } from '../../api/kinoboomApi';
-import styles from './index.module.scss';
+import styles from './MoviePage.module.scss';
 
 import { useNavigate } from 'react-router-dom';
-import MovieInfo from '../../components/MovieInfo';
+import MovieInfo from '../../components/MovieInfo/MovieInfo';
+import Button from '../../components/ui/Button/Button';
 
 const MoviePage = () => {
   const { id } = useParams();
@@ -32,13 +33,19 @@ const MoviePage = () => {
                   {data.nameRu} ({data.year})
                 </h1>
                 <h2>{data.nameOriginal}</h2>
-                <p>{data.shortDescription}</p>
+                <p>
+                  {data.shortDescription
+                    ? data.shortDescription
+                    : data.description}
+                </p>
                 <div className={styles.buttonGroup}>
-                  <button onClick={() => navigate(`/room/${id}`)}>
+                  <Button
+                    variant="primary"
+                    onClick={() => navigate(`/room/${id}`)}
+                  >
                     Смотреть
-                  </button>
-                  <button>Буду смотреть</button>
-                  <button>...</button>
+                  </Button>
+                  <Button variant="secondary">Буду смотреть</Button>
                 </div>
                 <MovieInfo movie={data} />
               </div>

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import styles from './index.module.scss';
+import styles from './MovieRoom.module.scss';
 
 const MovieRoom = () => {
   const { id } = useParams();
