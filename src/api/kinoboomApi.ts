@@ -56,3 +56,10 @@ export const getMovieById = async (id: number | string) => {
   const response = await kinoboomApi.get(query);
   return response.data;
 };
+
+export const getMovieByKeyword = async (keyword: string) => {
+  const query =
+    API_URL + `/v2.1/films/search-by-keyword?keyword=${keyword}&page=1`;
+  const response = await kinoboomApi.get(query);
+  return response.data;
+};
