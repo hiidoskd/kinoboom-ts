@@ -15,7 +15,7 @@ const SuggestionList = ({ keyword }: { keyword: string }) => {
   return (
     <div className={`${styles.suggestions} ${keyword ? styles.show : ''}`}>
       {!isLoading ? (
-        data.films.map((item) => (
+        data.films.map((item: any) => (
           <SuggestionCard
             key={item.filmId}
             title={item.nameRu}
