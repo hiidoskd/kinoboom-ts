@@ -1,52 +1,64 @@
-.form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+@use '../../styles/vars' as *;
+
+.mainContainer {
   position: relative;
-  @media (max-width: 768px) {
-    flex-grow: 1;
-  }
-
-  .searchbar {
-    position: relative;
-    padding: 0px 1em;
-    flex-grow: 1;
-    background: rgb(40, 40, 40);
-    width: clamp(150px, 23vw, 400px);
-    border-radius: 5px;
-    input {
-      width: 100%;
-      background: inherit;
-      height: 36px;
-      font-size: 1rem;
-      border: none;
-      outline: 0;
-      color: white;
-    }
-  }
-
-  button {
+  flex-grow: 1;
+  background: rgb(40, 40, 40);
+  border-radius: 5px;
+  justify-content: space-between;
+  .form {
     display: flex;
-    border: none;
-    padding: 0;
-    background: transparent;
-    color: gray;
-    cursor: pointer;
-  }
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-  .btnSearch {
-    margin-left: 10px;
-  }
+    @media (max-width: 768px) {
+      flex-grow: 1;
+    }
 
-  .btnClose {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    visibility: hidden;
-  }
-  .btnCloseActive {
-    visibility: visible;
+    .searchbar {
+      position: relative;
+      display: flex;
+      padding: 0px 1em;
+      flex-grow: 1;
+      width: clamp(150px, 23vw, 400px);
+      input {
+        width: 100%;
+        background: inherit;
+        height: 36px;
+        font-size: 1rem;
+        border: none;
+        outline: 0;
+        color: white;
+      }
+    }
+
+    .dropdown {
+      position: absolute;
+      width: 100%;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      padding: 0;
+      background: transparent;
+      color: gray;
+      cursor: pointer;
+    }
+
+    .btnSearch {
+      margin-left: 10px;
+    }
+
+    .btnClose {
+      visibility: hidden;
+    }
+    .btnCloseActive {
+      visibility: visible;
+    }
   }
 }
