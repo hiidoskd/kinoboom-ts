@@ -77,8 +77,7 @@ const MySlider = ({ filters, title }: MySliderProps) => {
                   item.ratingKinopoisk ? item.ratingKinopoisk : item.ratingImdb
                 }
                 type={item.type}
-                // url={item.posterUrlPreview}
-                url="#"
+                url={item.posterUrlPreview}
                 genres={item.genres}
               />
             </SwiperSlide>
