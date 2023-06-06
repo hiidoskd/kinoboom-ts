@@ -1,7 +1,15 @@
-import React from 'react';
 import styles from './SuggestionCard.module.scss';
 import Subtitle from '../../ui/Subtitle/Subtitle';
 import { Link } from 'react-router-dom';
+
+type SuggestionCardProps = {
+  url: string;
+  title: string;
+  year: number;
+  alternativeTitle: string;
+  rating: number | 'null';
+  id: number;
+};
 
 export const SuggestionCard = ({
   url,
@@ -10,7 +18,7 @@ export const SuggestionCard = ({
   alternativeTitle,
   rating,
   id,
-}) => {
+}: SuggestionCardProps) => {
   return (
     <div className={styles.container}>
       <Link to={`/movies/${id}`} className={styles.linkOverlay}></Link>
