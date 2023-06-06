@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .imgContainer {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 32px;
+    height: 48px;
+    margin-right: 14px;
+  }
+
+  .linkOverlay {
+    position: absolute;
+    inset: 0 0 0 0;
+  }
+}
