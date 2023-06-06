@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Subtitle.module.scss';
 
 type SubtitleProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 };
 
