@@ -64,7 +64,7 @@ const MySlider = ({ filters, title }: MySliderProps) => {
             },
             1280: {
               slidesPerView: 5.4,
-              spaceBetween: 30,
+              spaceBetween: 20,
             },
           }}
         >
