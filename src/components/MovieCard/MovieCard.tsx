@@ -24,7 +24,7 @@ const MovieCard = ({
     <Link to={`movies/${id}`}>
       <div className={styles.container}>
         <div className={styles.containerImg}>
-          <img src={url} />
+          <img src={url} loading="lazy" />
         </div>
         <div className={styles.info}>
           <h2>{title}</h2>
