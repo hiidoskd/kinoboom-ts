@@ -25,7 +25,9 @@ const Header = () => {
       }`}
     >
       <div className={styles.left}>
-        <div className={styles.logo}>KINOBOOM</div>
+        <Link to="/" className={styles.logo}>
+          KINOBOOM
+        </Link>
       </div>
       <div className={styles.right}>
         <div
@@ -33,9 +35,9 @@ const Header = () => {
             burgerOpen ? styles.links__active : ''
           }`}
         >
-          <Link to="#">Главная</Link>
+          {/* <Link to="/">Главная</Link>
           <Link to="#">Фильмы</Link>
-          <Link to="#">Сериалы</Link>
+          <Link to="#">Сериалы</Link> */}
         </div>
         <Searchbar />
         <div className={styles.avatar}>Login</div>
