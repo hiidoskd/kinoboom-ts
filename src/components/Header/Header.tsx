@@ -35,12 +35,12 @@ const Header = () => {
             burgerOpen ? styles.links__active : ''
           }`}
         >
-          {/* <Link to="/">Главная</Link>
-          <Link to="#">Фильмы</Link>
+          <Link to="/">Главная</Link>
+          {/* <Link to="#">Фильмы</Link>
           <Link to="#">Сериалы</Link> */}
         </div>
         <Searchbar />
-        <div className={styles.avatar}>Login</div>
+        {/* <div className={styles.avatar}>Login</div> */}
         <button
           className={styles.burger}
           onClick={() => {
