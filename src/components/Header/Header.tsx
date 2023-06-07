@@ -38,7 +38,7 @@ const Header = () => {
           <Link to="#">Сериалы</Link>
         </div>
         <Searchbar />
-        <div className={styles.avatar}>AVA</div>
+        <div className={styles.avatar}>Login</div>
         <button
           className={styles.burger}
           onClick={() => {
