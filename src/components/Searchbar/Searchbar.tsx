@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from './Searchbar.module.scss';
 import { MagnifyingGlassIcon, Cross2Icon } from '@radix-ui/react-icons';
-
 import SuggestionList from './SuggestionList/SuggestionList';
 import { useDebounce } from '../../hooks/useDebounce';
 
+import styles from './Searchbar.module.scss';
+
 const Searchbar = () => {
-  const navgigate = useNavigate();
   const [searchTerm, setValue] = useState('');
-  const debouncedSearchTerm = useDebounce(searchTerm, 500);
+  const debouncedSearchTerm = useDebounce(searchTerm, 250);
 
   const handleChange = (keyword: string) => {
     setValue(keyword);
@@ -17,7 +15,6 @@ const Searchbar = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    navgigate(`/search/${searchTerm}`);
   };
 
   return (
