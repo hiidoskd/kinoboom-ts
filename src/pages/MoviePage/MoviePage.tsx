@@ -11,7 +11,7 @@ const MoviePage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { data, isLoading } = useSWR(id, getMovieById);
-  console.log(data);
+
   if (isLoading) return <h1>Loading...</h1>;
   return (
     <div className={styles.container}>
