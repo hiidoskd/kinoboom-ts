@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { MagnifyingGlassIcon, Cross2Icon } from '@radix-ui/react-icons';
 import SuggestionList from './SuggestionList/SuggestionList';
 import { useDebounce } from '../../hooks/useDebounce';
 
 import styles from './Searchbar.module.scss';
+import { useOutsideAlerter } from '../../hooks/useOutsideAlerter';
 
 const Searchbar = () => {
+  const [open, setOpen] = useState(false);
   const [searchTerm, setValue] = useState('');
   const debouncedSearchTerm = useDebounce(searchTerm, 250);
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef, () => setOpen(false));
 
   const handleChange = (keyword: string) => {
     setValue(keyword);
@@ -20,11 +24,12 @@ const Searchbar = () => {
   return (
     <div className={styles.mainContainer}>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.searchbar}>
+        <div ref={wrapperRef} className={styles.searchbar}>
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => handleChange(e.target.value)}
+            onClick={() => setOpen(true)}
             placeholder="Поиск..."
           />
           <button
@@ -41,7 +46,7 @@ const Searchbar = () => {
           </button>
         </div>
       </form>
-      {debouncedSearchTerm && (
+      {open && searchTerm && debouncedSearchTerm && (
         <SuggestionList
           key={debouncedSearchTerm}
           keyword={debouncedSearchTerm}
