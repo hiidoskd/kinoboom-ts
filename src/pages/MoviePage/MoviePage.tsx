@@ -10,11 +10,7 @@ import Button from '../../components/ui/Button/Button';
 const MoviePage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { data, isLoading } = useSWR(id, getMovieById, {
-    revalidateIfStale: false,
-    revalidateOnFocus: false,
-    revalidateOnReconnect: false,
-  });
+  const { data, isLoading } = useSWR(id, getMovieById);
   console.log(data);
   if (isLoading) return <h1>Loading...</h1>;
   return (
