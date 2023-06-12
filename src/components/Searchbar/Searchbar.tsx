@@ -48,7 +48,6 @@ const Searchbar = () => {
       </form>
       {open && searchTerm && debouncedSearchTerm && (
         <SuggestionList
-          key={debouncedSearchTerm}
           keyword={debouncedSearchTerm}
         />
       )}

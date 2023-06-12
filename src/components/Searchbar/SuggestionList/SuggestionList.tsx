@@ -7,7 +7,6 @@ import styles from './SuggestionList.module.scss';
 
 const SuggestionList = ({ keyword }: { keyword: string }) => {
   const { data, isLoading } = useSWR(keyword, getMovieByKeyword, {
-    revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false,
   });
